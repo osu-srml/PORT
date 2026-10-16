@@ -50,7 +50,7 @@ per-position KL term). See `port_loss` in [`port/utils/loss.py`](port/utils/loss
         ├── trainers.py             # BasicTrainer / FSDPTrainer / TensorParallelTrainer
         ├── data_factory.py         # tokenization + batch iterators
         ├── spawn.py                # distributed / misc helpers
-        └── dataset/                # HH-RLHF, SHP, AlpacaFarm, ... loaders
+        └── dataset/                # HH-RLHF, AlpacaFarm, ... loaders
 ```
 
 ## Installation
@@ -69,7 +69,6 @@ The code was developed with PyTorch ≥ 2.0 and Transformers ≥ 4.30. Multi-GPU
 | -------------------- | ------------------------------------------------------------------- |
 | `hh`                 | [Anthropic/hh-rlhf](https://huggingface.co/datasets/Anthropic/hh-rlhf) |
 | `hh_pairwise_noise`  | HH-RLHF with randomly flipped pairs (`noise_rate`, `partial_ratio`)  |
-| `shp`                | [stanfordnlp/SHP](https://huggingface.co/datasets/stanfordnlp/SHP)   |
 | `alpaca_farm`        | AlpacaFarm human preferences (local JSON)                           |
 
 Hugging Face datasets download automatically into `local_dirs`.
@@ -117,16 +116,9 @@ Set `wandb.enabled=true wandb.entity=<entity> wandb.project=<project>` to log to
 | `loss.weight_power`     | Exponent on rank weights (`loss_based` only)                            |
 | `loss.N`                | Virtual Best-of-N size. Defaults to the batch size if `null`.          | -->
 
-<!-- ## Citation
+## Citation
 
-```bibtex
-@inproceedings{port2026,
-  title     = {TODO: PORT ...},
-  author    = {TODO},
-  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
-  year      = {2026}
-}
-``` -->
+The BibTeX entry will be available soon.
 
 ## Acknowledgements
 
