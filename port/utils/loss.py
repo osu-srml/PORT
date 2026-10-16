@@ -334,7 +334,7 @@ def port_loss(
         if ranking_method == "vbon_absolute_difference":
             m = 0.3
             n = 1.5
-            ranking_values = n * torch.abs(torch.exp(m * (chosen_cdf - rejected_cdf)))
+            ranking_values = n * torch.exp(m * (chosen_cdf - rejected_cdf))
 
         else:
             raise ValueError(f"Unknown vBoN ranking method: {ranking_method}")
